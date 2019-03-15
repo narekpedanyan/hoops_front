@@ -1,0 +1,85 @@
+
+.custom-field-row{
+  width: 63%;
+  height: 44px;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+  margin-top: 10px;
+  position: relative;
+}
+
+.select-drop{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .value{
+    width: 100%;
+    height: 100%;
+    @include DisplayFlex;
+    align-items: center;
+    color: #aaa;
+    padding: 0 10px;
+  }
+
+  .dropdown{
+    position: absolute;
+    top: 100%;
+    width: 120%;
+    max-height: 300px;
+    z-index: 55;
+    background: #fff;
+    box-shadow: 0 2px 24.93px 3.07px rgba(0, 0, 0, 0.24);
+    padding: 15px 20px;
+    @include DisplayFlex;
+    flex-direction: column;
+  }
+
+  .search{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 40px;
+    border: 1px solid #aaa;
+  }
+
+  .options{
+    flex: 1;
+    @include DisplayFlex;
+  }
+
+  .add-new{
+    width: 100%;
+    padding: 5px 10px;
+    height: 45px;
+    @include DisplayFlex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    font-size: 14px;
+    &:before{
+      content: '+';
+      font-size: 20px;
+      margin-right: 10px;
+    }
+    &:hover{
+      background: rgba(0,0,0,0.3);
+    }
+  }
+
+  .option{
+    width: 100%;
+    padding: 5px 10px;
+    height: 45px;
+    @include DisplayFlex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    font-size: 14px;
+    cursor: pointer;
+    color: #000;
+    font-weight: 700;
+    &:hover{
+      background: rgba(0,0,0,0.3);
+    }
+  }
+}

@@ -1,0 +1,255 @@
+.login-register-wrapper{
+  flex: 1;
+  @include DisplayFlex;
+  align-items: center;
+  justify-content: center;
+  .field-set{
+    width: 75%;
+    min-width: 960px;
+    max-width: 1280px;
+    background-color: #3fbeeb;
+    border-radius: 5px;
+    padding: 60px 70px;
+    @include DisplayFlex;
+    flex-direction: row;
+  }
+  .logo-col{
+    width: 45%;
+    flex: 1;
+    @include DisplayFlex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo-wrapper{
+    margin: auto;
+    width: 100%;
+  }
+
+  .title-logo-slogan{
+    font-size: 19.2px;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+    padding: 7px 0;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 4px;
+      width: 50px;
+      background-color: #fff;
+      bottom: -26px;
+      border-radius: 15px;
+    }
+  }
+
+  .user-fields{
+    flex: 1;
+    padding: 10px 0 10px 45px;
+    @include DisplayFlex;
+    border-left: 1px solid #fff;
+    flex-direction: column;
+    >form{
+      >div{
+        margin-top: 16px;
+      }
+      >div:nth-child(1),
+      >div:nth-child(2){
+        margin-top: 0;
+      }
+    }
+  }
+
+  .fields-heading{
+    color: #fff;
+    margin-bottom: 35px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .icon-section{
+    width: 35px;
+    height: 100%;
+    @include DisplayFlex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #c1e6f7;
+  }
+
+  .input-field{
+    width: 100%;
+    height: 48px;
+    flex: 1;
+    @include DisplayFlex;
+    flex-direction: row;
+    position: relative;
+    &.untouched{
+      border-bottom: 1px solid #fff;
+    }
+    &.invalid{
+      border-bottom: 1px solid #e3645b;
+      box-shadow: 0 1px 0 0 #e3645b;
+    }
+    &.focus-process{
+      border-bottom: 1px solid #1f89bb;
+      box-shadow: 0 1px 0 0 #1f89bb;
+    }
+    &.success{
+      border-bottom: 1px solid #52ba57;
+      box-shadow: 0 1px 0 0 #52ba57;
+    }
+  }
+  .field-animation-wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-left: 35px;
+    @include DisplayFlex;
+    align-items: center;
+    pointer-events: none;
+  }
+  .input-label{
+    font-size: 16px;
+    transition: .3s;
+    color: #fff;
+  }
+  .exact-field{
+    flex: 1;
+    color: #fff;
+    font-size: 18px;
+
+    &:focus{
+      + .field-animation-wrapper > .input-label{
+        font-size: 12px;
+        transform: translateY(-27px);
+      }
+    }
+  }
+  .exact-field{
+
+  }
+  .exact-field::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-size: 16px;
+    color: #fff;
+    opacity: 1; /* Firefox */
+  }
+
+  .exact-field:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .exact-field::-ms-input-placeholder { /* Microsoft Edge */
+    font-size: 16px;
+    color: #fff;
+  }
+  .request-btn-wrapper{
+    margin-top: 40px;
+    width: 100%;
+    height: 55px;
+    background-color: rgb(255,255,255);
+    border-radius: 2px;
+    .btn{
+      width: 100%;
+      height: 100%;
+      color: rgb(29, 179, 231);
+      font-family: 'Catamaran', sans-serif;
+      font-size: 18px;
+    }
+    &.register{
+      margin-top: 40px;
+    }
+    &.recover{
+      margin-top: 60px;
+    }
+    &.login{
+      margin-top: 44px;
+    }
+  }
+  .remember-password-row{
+    width: 100%;
+    @include DisplayFlex;
+    flex-direction: row;
+  }
+  .form-helper{
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 20px;
+    &.lighten{
+      color: #cff2ff;
+    }
+    >a{
+      @extend .form-helper;
+      text-decoration: underline;
+    }
+  }
+}
+
+.checkbox-ctrl{
+  @include DisplayFlex;
+  align-items: flex-end;
+  flex: 1;
+  >label{
+    padding-left: 10px;
+    color: rgb(255,255,255);
+  }
+}
+
+.rem-col{
+  flex: 1;
+  @include DisplayFlex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: rgb(255,255,255);
+  >a:link,
+  >a:visited,
+  >a:hover,
+  >a:active{
+    color: rgb(255,255,255);
+  }
+}
+
+.custom-checkbox-style{
+  width: 20px;
+  height: 20px;
+  position: relative;
+  .icon-mark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(0,0,0,0.5);
+    border-radius: 2px;
+    transition: border .1s linear;
+    pointer-events: none;
+    @include DisplayFlex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    &:before{
+      color: #fff;
+      font-size: 10px;
+      transform: scale(0.0);
+      transition: transform .1s ease-out;
+    }
+  }
+  >.checkbox{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    &:checked + .icon-mark{
+      border: 2px solid #1db3e7;
+      background-color: #1db3e7;
+      &:before{
+        transform: scale(1);
+      }
+    }
+  }
+}

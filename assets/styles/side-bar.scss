@@ -1,0 +1,107 @@
+.side-bar{
+  width: 245px;
+  height: 100%;
+  @include DisplayFlex;
+  flex-direction: column;
+
+}
+
+.logo{
+  width: 100%;
+  height: 70px;
+  @include DisplayFlex;
+  align-items: center;
+  padding: 0 26px;
+  position: relative;
+  z-index: 5;
+}
+
+.bar-items{
+  flex: 1;
+  box-shadow: 0 16px 1px -2px rgba(0, 0, 0, 0.2), 0 22px 2px 0 rgba(0, 0, 0, 0.14), 0 5px 5px 0 rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 4;
+  @include DisplayFlex;
+  flex-direction: column;
+}
+
+.account-row{
+  width: 100%;
+  height: 60px;
+  @include DisplayFlex;
+  padding: 0 16px;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 34px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 45px;
+  .account-collapse{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.account-img{
+  $frame_size: 60px;
+  width: $frame_size;
+  height: $frame_size;
+  border: 4px solid #eaeaea;
+  border-radius: 100%;
+  overflow: hidden;
+  >img{
+    float: left;
+    width: 100%;
+  }
+}
+
+.account-info{
+  flex: 1;
+  @include DisplayFlex;
+  align-items:center;
+  padding-left: 16px;
+  font-size: 16px;
+  color: #111;
+  >i{
+    margin-left: auto;
+  }
+}
+
+.route-tabs{
+  width: 100%;
+  height: 60px;
+  >a:link,
+  >a:visited,
+  >a:active{
+    text-decoration: none;
+    position: relative;
+    @include DisplayFlex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 30px;
+    transition: .1s linear;
+    font-weight: 500;
+    color: #666f7f;
+    height: 100%;
+    >span{
+      padding-left: 25px;
+      padding-top: 2px;
+      font-size: 16px;
+    }
+    &.active{
+      background: red;
+    }
+  }
+  >a:hover{
+    background-color: rgba(0,0,0,.05);
+    color: #3f4f68;
+    &:before{
+      content: '';
+      height: 100%;
+      width: 2px;
+      background: #1db3e7;
+      position: absolute;
+      left: 0;
+    }
+  }
+}

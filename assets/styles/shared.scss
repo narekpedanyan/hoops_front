@@ -1,0 +1,168 @@
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"]{
+  background: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+a:hover,
+a:visited,
+a:link,
+a:active{
+  text-decoration: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+select{
+  background: transparent;
+}
+
+
+input:-webkit-autofill,
+select:-webkit-autofill,
+textarea:-webkit-autofill {
+  background-color: transparent !important;
+  background-image: none;
+
+  color: #000;
+}
+
+.exact-field:-webkit-autofill{
+  background-color: transparent !important;
+}
+
+//Shared Scroll View
+
+.shared-scroll-view{
+  flex: 1;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.shared-scroll-view::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.shared-scroll-view::-webkit-scrollbar, ::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+.shared-scroll-view::-webkit-scrollbar-thumb {
+  background-color: #777;
+  border-radius: 10px;
+}
+.shared-scroll-view::-webkit-scrollbar, ::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+//Headings
+h5{
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+
+.main-wrapper-layout{
+  @include DisplayFlex;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+
+
+
+.light-blue {
+  background-color: #1db3e7;
+}
+
+
+.main-layout-container{
+  width: 100%;
+  height: 100%;
+  @include DisplayFlex;
+  flex-direction: row;
+}
+
+//For registered Users Layout
+
+.main-layout{
+  flex: 1;
+  background: #f4f6f9;
+  @include DisplayFlex;
+  flex-direction: column;
+  header.header{
+    width: 100%;
+    height: 70px;
+    background: #4fc8ed;
+  }
+}
+
+//Collapse
+.account-collapse{
+  width: 202px;
+  position: absolute;
+  top: 100%;
+  box-shadow: 0 0 14px rgba(0,0,0,0.2);
+  overflow: hidden;
+  left: 0;
+  z-index: 77;
+  .collapse-btn{
+    width: 100%;
+    height: 62px;
+    @include DisplayFlex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 15px;
+    transition: background .1s linear;
+    background: #fff;
+    >i{
+      color: #666f7f;
+    }
+    .collapse-btn-text{
+      flex: 1;
+      @include DisplayFlex;
+      align-items: center;
+      padding-left: 15px;
+      font-size: 14px;
+      color: rgb(1,1,1);
+      font-weight: 400;
+      padding-top: 6px;
+      height: 100%;
+    }
+    &:hover{
+      background-color: #f3f3f3;
+    }
+  }
+  >div>div:not(:nth-last-child(1)){
+    border-bottom: 1px solid #e8e8e8;
+  }
+  @-webkit-keyframes collapse {
+    from {height: 0;}
+    to {height: auto;}
+  }
+
+  /* Standard syntax */
+  @keyframes collapse {
+    from {height: 0;}
+    to {height: auto;}
+  }
+  &.animate{
+    -webkit-animation: collapse .3s linear; /* Safari 4.0 - 8.0 */
+    animation: collapse .3s linear;
+    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forwards;
+  }
+}

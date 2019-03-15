@@ -1,0 +1,34 @@
+//@import-steps-page url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700');
+@import 'font-resources';
+@import 'reset';
+@import 'mixins';
+@import 'shared';
+@import 'material-icons';
+@import 'login-register';
+@import 'side-bar';
+@import 'catalogue';
+@import 'grid/bootstrap-grid.scss';
+@import 'import-page';
+@import 'custom-dropdown';
+@import 'add-vendor';
+@import 'loader';
+@import 'single-product';
+@import 'steps-custom';
+@import 'filter-side-bar';
+@import 'video-modal';
+
+body{
+  font-family: 'Catamaran', sans-serif;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  -ms-user-select: none;
+}
+
+.application{
+  width: 100%;
+  height: 100%;
+}
+
+
